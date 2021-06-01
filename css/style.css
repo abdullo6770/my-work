@@ -54,7 +54,20 @@ p {
   color: var(--btn) !important;
 }
 
+.title {
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--title);
+  line-height: 125%;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+
 /* header start */
+
+.header__nav {
+  margin-bottom: 30px;
+}
 
 .header__list {
   column-gap: 30px;
@@ -75,6 +88,105 @@ p {
 
 .header__link-btn {
   width: 190px;
+}
+
+.header__menu {
+  width: 50px;
+  height: 2px;
+  position: relative;
+  border: none;
+  padding: 0;
+  transition: .4s;
+}
+
+.header__menu.collapsed {
+  background: var(--txt);
+}
+
+.header__menu:focus {
+  box-shadow: unset;
+}
+
+.header__menu::before,
+.header__menu::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--txt);
+  transition: .4s;
+}
+
+.header__menu::after {
+  top: 10px;
+}
+
+.header__menu:not(.collapsed)::before {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.header__menu:not(.collapsed)::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.header__content-subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  color: var(--txt);
+}
+
+.header__content-btn {
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto 50px;
+}
+
+.header__tech-card:first-of-type .header__tech-brand {
+  color: #E44F26;
+}
+
+.header__tech-card:nth-of-type(2) .header__tech-brand {
+  color: #1572B6;
+}
+
+.header__tech-card:last-of-type .header__tech-brand {
+  color: #790FF1;
+}
+
+.header__tech-name {
+  color: var(--title);
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.header__carousel-indicators {
+  position: static;
+  margin: 50px 0 0;
+  column-gap: 30px;
+}
+
+.header__carousel-dot {
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 50%;
+  background: var(--dots) !important;
+  border: none !important;
+  opacity: 1 !important;
+}
+
+.header__carousel-dot.active {
+  background: var(--dots-active) !important;
+}
+
+.header__carousel-img {
+  max-height: 500px;
 }
 
 /* header end */
