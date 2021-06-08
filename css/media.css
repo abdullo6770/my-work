@@ -13,3 +13,10 @@
   }
   
 }
+
+
+@media (max-width: 1440px) {
+  .about::after {
+    display: none;
+  }
+}
