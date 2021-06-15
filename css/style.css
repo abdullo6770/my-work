@@ -365,14 +365,6 @@ padding: 30px;
   overflow: hidden;
 }
 
-
-
-
-
-/* capabilities end */
-
-
-
 .accordion__button {
   width: 100%;
   display: flex;
@@ -413,21 +405,12 @@ padding: 30px;
   font-size: 25px;
 }
 
-
-
 .accordion__button.collapsed .accordion__icon-down {
   transform: rotate(180deg);
-  
-  
-  
 }
 
-
-
-
-
-.accordion__item:nth-last-of-type(1) .accordion__button.collapsed::after, 
-.accordion__item:nth-last-of-type(2) .accordion__button.collapsed::after {
+.accordion__item:nth-of-type(1) .accordion__button.collapsed::after, 
+.accordion__item:nth-of-type(2) .accordion__button.collapsed::after {
   content: '';
   position: absolute;
   width: 95%;
@@ -438,7 +421,92 @@ padding: 30px;
   transform: translate(-50%);
   
 }
+
+.accordion__item:nth-of-type(1) .accordion__button.collapsed .accordion__brand {
+  color: #E44F26;
+}
+
+.accordion__item:nth-of-type(2) .accordion__button.collapsed .accordion__brand {
+  color: #1572B6;
+}
+
+.accordion__item:nth-of-type(3) .accordion__button.collapsed .accordion__brand {
+  color: #790FF1;
+}
+
+/* capabilities end */
+
+
+
+/* Works start  */
+.works {
+  padding-bottom: 220px;
+}
+.works__tab-list {
+  border-radius: 8px;
+}
+.works__tab-desc {
+box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
+border-radius: 8px;
+background: var(--body);
+padding: 20px;
+}
+.works__tab-link {
+box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
+background: var(--body);
+font-size: 18px;
+font-weight: 600;
+color: var(--title);
+text-transform: uppercase;
+padding: 20px;
+border: none;
+transition: .4s;
+}
+.works__tab-link.active {
+  background: var(--btn);
+  color: var(--body);
+}
+.list-group-item+.list-group-item.active {
+  margin: 0;
+  bottom: none;
+}
+.works__tab-image {
+  min-height: 285px;
+  height: 100%;
+  
+  
+}
+
+.works__tab-img {
+  width: 100%;
+  min-height: 285px;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;
  
+}
+
+.works__tab-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--title);
+  
+}
+
+.works__tab-txt {
+  text-transform: capitalize;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--txt);
+}
+
+.works__tab-btn {
+  width: 190px;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 18px;
+}
 
 
 
@@ -446,7 +514,4 @@ padding: 30px;
 
 
 
-
-
-
-
+/* works end */
