@@ -16,7 +16,8 @@
 
 
 @media (max-width: 1440px) {
-  .about::after {
+  .about::after, 
+  .worls::before {
     display: none;
   }
 }

@@ -62,11 +62,13 @@ p {
   margin-bottom: 25px;
   text-transform: capitalize;
 }
+
 @keyframes rotate {
   0% {
     transform: rotate(0) scale(1.2);
-    
+
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -165,6 +167,7 @@ p {
   top: 0;
   transform: rotate(-45deg);
 }
+
 .header__content {
   position: relative;
 }
@@ -190,8 +193,8 @@ p {
   right: 15%;
   top: 70%;
   z-index: -1;
-border: 3vw #7177F1;
-animation: rotate 3s linear infinite alternate;
+  border: 3vw #7177F1;
+  animation: rotate 3s linear infinite alternate;
 }
 
 
@@ -306,18 +309,18 @@ animation: rotate 3s linear infinite alternate;
   position: absolute;
   top: -15px;
   right: -15px;
-  
-  
+
+
 }
 
 
 
 
 .about__desc {
-box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
-border-radius: 8px;
-background: var(--body);
-padding: 30px;
+  box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
+  border-radius: 8px;
+  background: var(--body);
+  padding: 30px;
 
 }
 
@@ -336,7 +339,7 @@ padding: 30px;
   max-width: 190px;
   width: 100%;
   text-transform: uppercase;
-  
+
 }
 
 
@@ -409,7 +412,7 @@ padding: 30px;
   transform: rotate(180deg);
 }
 
-.accordion__item:nth-of-type(1) .accordion__button.collapsed::after, 
+.accordion__item:nth-of-type(1) .accordion__button.collapsed::after,
 .accordion__item:nth-of-type(2) .accordion__button.collapsed::after {
   content: '';
   position: absolute;
@@ -419,7 +422,7 @@ padding: 30px;
   bottom: 0;
   left: 50%;
   transform: translate(-50%);
-  
+
 }
 
 .accordion__item:nth-of-type(1) .accordion__button.collapsed .accordion__brand {
@@ -441,57 +444,83 @@ padding: 30px;
 /* Works start  */
 .works {
   padding-bottom: 220px;
+  position: relative;
 }
+.works::before {
+  content: url(../img/svg/figure_2.svg);
+  position: absolute;
+  top: -42%;
+  left: 0;
+  z-index: -1;
+}
+
+.works::after {
+  content: '';
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+  right: 5%;
+  top: 45%;
+  border: .3vw solid #7177f1;
+  z-index: -1;
+  animation: rotate 3s linear infinite alternate;
+}
+
 .works__tab-list {
   border-radius: 8px;
 }
+
 .works__tab-desc {
-box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
-border-radius: 8px;
-background: var(--body);
-padding: 20px;
+  box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
+  border-radius: 8px;
+  background: var(--body);
+  padding: 20px;
 }
+
 .works__tab-link {
-box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
-background: var(--body);
-font-size: 18px;
-font-weight: 600;
-color: var(--title);
-text-transform: uppercase;
-padding: 20px;
-border: none;
-transition: .4s;
+  box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
+  background: var(--body);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--title);
+  text-transform: uppercase;
+  padding: 13.5px;
+  border: none;
+  transition: .4s;
 }
+
 .works__tab-link.active {
   background: var(--btn);
   color: var(--body);
 }
+
 .list-group-item+.list-group-item.active {
   margin: 0;
   bottom: none;
 }
+
 .works__tab-image {
   min-height: 285px;
   height: 100%;
-  
-  
+
+
 }
 
 .works__tab-img {
   width: 100%;
-  min-height: 285px;
+  max-height: 285px;
   height: 100%;
   object-fit: cover;
   object-position: top;
   border-radius: 8px;
- 
+
 }
 
 .works__tab-title {
   font-size: 24px;
   font-weight: 600;
   color: var(--title);
-  
+
 }
 
 .works__tab-txt {
@@ -508,10 +537,52 @@ transition: .4s;
   font-size: 18px;
 }
 
-
-
-
-
-
-
 /* works end */
+
+
+
+/* footer start  */
+.footer {
+  padding-bottom: 133px;
+  position: relative;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  width: 3vw;
+  height: 3.2vw;
+  left: 50%;
+  top: -65%;
+  border: .3vw solid #790FF1;
+  border-radius: 50%;
+  z-index: -1;
+  animation: rotate 3s linear infinite alternate;
+  
+}
+.footer::after {
+  top: 20%;
+  left: 5%;
+}
+
+.footer__link {
+  font-size: 24px;
+  color: var(--footer-link);
+  text-transform: capitalize;
+  
+}
+
+.footer__link:hover {
+  color: var(--footer-link);
+  text-decoration: underline;
+}
+
+.footer__contact {
+  font-size: 24px;
+  color: var(--footer-link) ;
+  text-transform: capitalize;
+}
+.footer__contact:hover {
+  color: var(--footer-link);
+  text-decoration: underline;
+}
+/* footer end  */
